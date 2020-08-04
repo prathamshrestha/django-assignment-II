@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UserInfo</title>
+</head>
+<body>
+    <h1>listing all users</h1>
+    <a href="/crud/createuser/">Sign up</a>
+    <table method="POST" border=1px>
+        <tr>
+            <th>ID</th>
+            <th>blog title</th>
+            <th>blog</th>
+            
+            <th>action</th>
+        </tr>
+        
+        {% for u in data %}
+            <tr>
+                <th>{{u.id}}</th>
+                <th>{{u.blog_title}}</th>
+                <th>{{u.blog}}</th>>
+                
+                <th><a href="/crud/updateuser/{{u.id}}/"> update</a></th>
+                
+
+            </tr>
+        {%endfor%}
+        
+    </table>
+</body>
+</html>
